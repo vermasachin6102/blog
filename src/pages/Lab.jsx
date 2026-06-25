@@ -32,9 +32,9 @@ export default function Lab() {
   return (
     <section className="section container">
       <div className="section-header">
-        <h2>The Lab</h2>
+        <h2>Bell Labs <span style={{ fontSize: '0.45em', fontWeight: 400, color: 'var(--color-subtle)', letterSpacing: 0 }}>— borrowed name, obviously</span></h2>
         <p style={{ marginTop: '1rem', maxWidth: '600px', margin: '1rem auto 0' }}>
-          Where I build things for fun. Open source contributions, weekend projects, and UI experiments.
+          Named after the legendary Bell Labs — where the transistor, Unix, C, and the laser were born. This is my much humbler corner for building things for fun.
         </p>
       </div>
 

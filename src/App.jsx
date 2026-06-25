@@ -10,10 +10,9 @@ import Lab from './pages/Lab';
 import Projects from './pages/Projects';
 
 const navItems = [
-  { label: 'Essays',   to: '/essays' },
-  { label: 'Library',  to: '/library' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'Lab',      to: '/lab' },
+  { label: 'Essays',    to: '/essays' },
+  { label: 'Library',   to: '/library' },
+  { label: 'Bell Labs', to: '/lab' },
 ];
 
 function Nav() {
