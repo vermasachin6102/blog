@@ -1,27 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Coffee-inspired Color Palette */
-  --color-espresso: #2C1810;
-  --color-mocha: #4A3022;
-  --color-latte: #CBAE9A;
-  --color-cream: #F5EFEB;
-  --color-accent: #E58D57; /* Warm playful orange for highlights */
-  
-  /* Text colors */
-  --text-main: var(--color-espresso);
-  --text-light: var(--color-mocha);
-  --text-inverse: var(--color-cream);
+  --color-bg:       #F4F1EB;
+  --color-bg-alt:   #ECE6DC;
+  --color-dark:     #473C33;
+  --color-darker:   #2E2620;
+  --color-brand:    #B07E58;
+  --color-brand-lt: #D9B791;
+  --color-head:     #322A24;
+  --color-text:     #3A322B;
+  --color-muted:    #75695E;
+  --color-subtle:   #A4998D;
+  --color-label:    #9A6C49;
+  --color-cream:    #F1ECE4;
 
-  /* Backgrounds */
-  --bg-main: var(--color-cream);
-  --bg-card: rgba(255, 255, 255, 0.6);
-  
-  /* Utilities */
-  --border-radius-lg: 24px;
-  --border-radius-md: 16px;
+  /* legacy aliases so existing pages don't break */
+  --color-espresso: #2C1810;
+  --color-mocha:    #4A3022;
+  --color-latte:    #CBAE9A;
+  --color-accent:   #B07E58;
+  --bg-main:        var(--color-bg);
+  --bg-card:        rgba(255,255,255,0.6);
+  --text-main:      var(--color-text);
+  --text-light:     var(--color-muted);
+  --text-inverse:   var(--color-cream);
+
+  --border-radius-lg: 22px;
+  --border-radius-md: 14px;
   --border-radius-sm: 8px;
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition: all 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 * {
@@ -35,15 +42,17 @@ html {
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
-  background-image: radial-gradient(var(--color-latte) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
 }
+
+::selection { background: #C49A78; color: #2A231D; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: #d8cdbf; border-radius: 8px; border: 3px solid #F4F1EB; }
 
 /* Typography */
 h1, h2, h3, h4 {

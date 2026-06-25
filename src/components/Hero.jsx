@@ -1,5 +1,6 @@
-import { Coffee, BookOpen, PenTool } from 'lucide-react';
+import { BookOpen, PenTool } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import CoffeeLiquid from './CoffeeLiquid';
 
 export default function Hero() {
   return (
@@ -21,27 +22,8 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-image-container animate-float">
-        <div className="blob"></div>
-        <div style={{
-          width: '100%',
-          height: '100%',
-          borderRadius: '50%',
-          overflow: 'hidden',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: 'rgba(255,255,255,0.2)',
-          backdropFilter: 'blur(10px)',
-          border: '2px solid rgba(255,255,255,0.5)',
-          boxShadow: '0 20px 40px rgba(44, 24, 16, 0.1)'
-        }}>
-          <img 
-            src="https://api.dicebear.com/7.x/notionists/svg?seed=Sachin&backgroundColor=f5efeb" 
-            alt="Sachin Verma Avatar" 
-            style={{ width: '80%', height: '80%', objectFit: 'contain' }}
-          />
-        </div>
+      <div className="hero-image-container">
+        <CoffeeLiquid />
       </div>
     </section>
   );
