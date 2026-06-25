@@ -16,12 +16,6 @@ const books = [
   { no: '05', title: 'Tidy First?',                    author: 'Kent Beck',        rating: 3, bg: 'linear-gradient(155deg,#7A6450,#4E3F30)' },
 ];
 
-const projects = [
-  { no: '01', name: 'Digital Garden Engine', status: 'Live',        desc: 'A static-site generator built for interlinked, ever-evolving notes — backlinks, graph view, and incremental builds.', tech: 'Go · Svelte' },
-  { no: '02', name: 'Shelf',                 status: 'Beta',        desc: 'A self-hosted reading tracker with a beautiful spine-view bookshelf and a quiet rating system.',                      tech: 'TypeScript · SQLite' },
-  { no: '03', name: 'kbd.css',               status: 'Open Source', desc: 'A tiny CSS library for rendering realistic, themeable keyboard shortcuts. 1.2k stars and counting.',                tech: 'CSS' },
-];
-
 const lab = [
   { no: '01', name: 'Coffee Color Picker', tag: 'Demo',      note: 'Generates a palette from a photo of your morning brew. Surprisingly accurate, mostly brown.' },
   { no: '02', name: 'Reading Heatmap',     tag: 'WIP',       note: 'A contribution-style graph, but for pages read. Gamifying the habit, gently.' },
@@ -32,7 +26,7 @@ const lab = [
 const socials = ['Twitter', 'LinkedIn', 'GitHub', 'RSS'];
 
 const footerCols = [
-  { head: 'Explore',  items: ['Essays', 'Library', 'Projects', 'Lab', 'Archive'] },
+  { head: 'Explore',  items: ['Essays', 'Library', 'Bell Labs', 'Archive'] },
   { head: 'About',    items: ['Now', 'Uses', 'Colophon', 'RSS Feed'] },
   { head: 'Connect',  items: ['Newsletter', 'Twitter', 'GitHub', 'Email'] },
 ];
@@ -174,41 +168,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PROJECTS ────────────────────────────────────────────────── */}
-      <section style={{ padding: '104px 60px', maxWidth: 1480, margin: '0 auto' }}>
-        <div style={{ marginBottom: 56 }}>
-          <div style={{ fontWeight: 600, letterSpacing: '2.5px', fontSize: 13, color: '#9A6C49', textTransform: 'uppercase', marginBottom: 14 }}>Building</div>
-          <h2 style={{ fontWeight: 600, fontSize: 44, letterSpacing: '-1px', margin: 0, color: '#322A24' }}>Projects</h2>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          {projects.map((p, i) => (
-            <Link key={i} to="/projects" className="lift" style={{ textDecoration: 'none', color: '#3A322B', display: 'grid', gridTemplateColumns: '84px 1fr auto', alignItems: 'center', gap: 30, padding: '34px 20px', borderTop: '1px solid rgba(58,50,43,.1)' }}>
-              <div style={{ fontWeight: 600, fontSize: 34, color: '#C2AF9C', lineHeight: 1 }}>{p.no}</div>
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 13, marginBottom: 8 }}>
-                  <h3 style={{ fontWeight: 600, fontSize: 25, margin: 0, color: '#322A24' }}>{p.name}</h3>
-                  <span style={{ fontWeight: 600, fontSize: 11, letterSpacing: '.6px', textTransform: 'uppercase', color: '#8B7E70', border: '1px solid rgba(58,50,43,.18)', padding: '3px 10px', borderRadius: 30 }}>{p.status}</span>
-                </div>
-                <p style={{ fontSize: 15.5, lineHeight: 1.58, color: '#75695E', margin: 0, maxWidth: 660 }}>{p.desc}</p>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-                <span style={{ fontSize: 13.5, color: '#A4998D', letterSpacing: '.3px' }}>{p.tech}</span>
-                <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, borderRadius: '50%', border: '1px solid rgba(58,50,43,.2)', flexShrink: 0 }}>
-                  <svg viewBox="0 0 24 24" style={{ width: 17, height: 17, fill: 'none', stroke: '#473C33', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round' }}><path d="M7 17L17 7M9 7h8v8" /></svg>
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* ── LAB ─────────────────────────────────────────────────────── */}
+      {/* ── BELL LABS ───────────────────────────────────────────────── */}
       <section style={{ background: '#473C33', color: '#F1ECE4' }}>
         <div style={{ padding: '104px 60px', maxWidth: 1480, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20, marginBottom: 56 }}>
             <div>
               <div style={{ fontWeight: 600, letterSpacing: '2.5px', fontSize: 13, color: '#D9B791', textTransform: 'uppercase', marginBottom: 14 }}>Experiments</div>
-              <h2 style={{ fontWeight: 600, fontSize: 44, letterSpacing: '-1px', margin: 0, color: '#F1ECE4' }}>The Lab</h2>
+              <h2 style={{ fontWeight: 600, fontSize: 44, letterSpacing: '-1px', margin: 0, color: '#F1ECE4' }}>Bell Labs <span style={{ fontSize: '0.45em', fontWeight: 400, color: 'rgba(217,183,145,.6)', letterSpacing: 0 }}>— borrowed name</span></h2>
             </div>
             <p style={{ maxWidth: 360, fontSize: 15.5, lineHeight: 1.62, color: 'rgba(241,236,228,.6)', margin: 0 }}>Half-finished ideas, weekend hacks, and things I'm tinkering with. Brewed fresh, served raw.</p>
           </div>
